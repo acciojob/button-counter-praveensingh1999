@@ -1,18 +1,13 @@
 
-import React from "react";
+import React,{useState} from "react";
 import './../styles/App.css';
-import {useState} from "react";
-
 
 const App = () => {
-   const [count, setCount] = useState("0");
+  const [count,setCount] = useState(0)
   return (
     <div>
-      
-      <div>Button clicked {count} times</div>
-  <button type="button" onClick = {() => setCount(count+1)}>
-Click me</button>
-  
+        <p>Button clicked {count} times</p>
+    <button onClick={()=>setCount(count+1)}>Click me</button>
     </div>
   )
 }
